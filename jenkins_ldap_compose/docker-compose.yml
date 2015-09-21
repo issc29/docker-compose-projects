@@ -1,0 +1,17 @@
+jenkinsldap:
+    container_name: jenkins_ldap
+    image: osixia/openldap:1.0.1
+    volumes:
+        - /data/ldap/database:/var/lib/ldap
+        - /data/ldap/config:/etc/ldap/slapd.d
+    restart: always
+jenkinsphpldap:
+    container_name: jenkins_phpldap
+    image: osixia/phpldapadmin:0.6.2
+    ports:
+        - "443:443"
+    links:
+        - jenkinsldap
+    environment:
+        - PHPLDAPADMIN_LDAP_HOSTS=jenkins_ldap
+    restart: always
