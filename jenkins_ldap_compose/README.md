@@ -15,6 +15,6 @@ A configuration file for the ldap-reset-password has also been included in the l
 ## Container Info
 
 For more info and settings for specific containers used please see:
-LDAP - https://github.com/osixia/docker-openldap
-phpLDAPadmin - https://github.com/osixia/docker-phpLDAPadmin
-reset-password - https://github.com/issc29/ldap-reset-password
+* LDAP - https://github.com/osixia/docker-openldap
+*  phpLDAPadmin - https://github.com/osixia/docker-phpLDAPadmin
+* reset-password - https://github.com/issc29/ldap-reset-password
