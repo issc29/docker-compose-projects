@@ -64,7 +64,7 @@ $shadow_options['update_shadowLastChange'] = false;
 # clear (the default)
 # auto (will check the hash of current password)
 # This option is not used with ad_mode = true
-$hash = "clear";
+$hash = "MD5";
 
 # Prefix to use for salt with CRYPT
 $hash_options['crypt_salt_prefix'] = "$6$";
