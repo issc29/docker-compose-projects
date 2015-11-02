@@ -7,7 +7,8 @@ Contains 3 named containers: jenkins_ldap, jenkins_phpldap, and jenkins_ldaprese
 
 ## Setup
 
-Requires a volume to save the ldap database, config, and reset-password configuration
+Requires a volume to save the ldap database, config, and reset-password configuration.
+
 By default LDAP data will mount to volume /data/ldap/database and /data/ldap/config
 
 A configuration file for the ldap-reset-password has also been included in the ldap-reset-pass-config folder. Docker-compose will mount to /data/ldap-reset-pass-config which should be this folder with the specified config file.
