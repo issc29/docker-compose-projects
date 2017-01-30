@@ -1,4 +1,4 @@
-jenkinsldap:
+ldap:
     container_name: ldap
     image: osixia/openldap:1.1.7
     volumes:
@@ -7,7 +7,7 @@ jenkinsldap:
     restart: always
     ports:
           - "389:389"
-jenkinsphpldap:
+phpldapadmin:
     container_name: phpldapadmin
     image: osixia/phpldapadmin:0.6.12
     ports:
