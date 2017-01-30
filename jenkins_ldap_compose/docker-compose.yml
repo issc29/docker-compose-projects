@@ -1,6 +1,6 @@
 jenkinsldap:
-    container_name: jenkins_ldap
-    image: osixia/openldap:1.0.1
+    container_name: ldap
+    image: osixia/openldap:1.1.7
     volumes:
         - /data/ldap/database:/var/lib/ldap
         - /data/ldap/config:/etc/ldap/slapd.d
@@ -8,22 +8,12 @@ jenkinsldap:
     ports:
           - "389:389"
 jenkinsphpldap:
-    container_name: jenkins_phpldap
-    image: osixia/phpldapadmin:0.6.2
+    container_name: phpldapadmin
+    image: osixia/phpldapadmin:0.6.12
     ports:
         - "443:443"
     links:
-        - jenkinsldap
+        - ldap
     environment:
-        - PHPLDAPADMIN_LDAP_HOSTS=jenkins_ldap
-    restart: always
-ldapresetpassword:
-    container_name: jenkins_ldapresetpass
-    image: issc29/ldap-reset-password:1.0
-    ports:
-        - "8080:80"
-    links:
-        - jenkinsldap
-    volumes:
-      - /data/ldap-reset-pass-config:/ldap-override
+        - PHPLDAPADMIN_LDAP_HOSTS=ldap
     restart: always
