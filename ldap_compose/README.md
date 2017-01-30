@@ -1,4 +1,4 @@
-# jenkins_ldap_compose
+# ldap_compose
 Docker Compose with LDAP + phpLDAPadmin
 
 Requires docker-compose 1.4.0+ (for container_name support)
