@@ -9,12 +9,12 @@ networks:
 services:
   jenkins:
       container_name: jenkins
-      image:  issc29/jenkins-docker:2.32.2-alpine
+      image:  issc29/jenkins-docker:2.107.1-alpine
       volumes:
           - ~/Documents/jenkins:/var/jenkins_home
       restart: always
       ports:
-          - "8080:8080"
+          - "9999:8080"
           - "50000:50000"
       environment:
           - DOCKER_HOST=tcp://docker-service:2375

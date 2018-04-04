@@ -11,7 +11,7 @@ phpldapadmin:
     container_name: phpldapadmin
     image: osixia/phpldapadmin:0.6.12
     ports:
-        - "443:443"
+        - "9443:443"
     links:
         - ldap
     environment:
